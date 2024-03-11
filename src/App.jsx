@@ -1,15 +1,10 @@
 import { useState } from "react"
 import Card from "../components/Card";
-import { MdNightlight, MdBrightness7 } from "react-icons/md"
+import Swithcer from "../components/Swithcer";
 
 export default function App() {
-  const [togle, setTogle] = useState(false);
   const [scoreA, setScroreA] = useState(0)
   const [scoreB, setScroreB] = useState(0);
-
-  function darkMode() {
-    setTogle(!togle);
-  }
 
   // if ()
 
@@ -38,12 +33,10 @@ export default function App() {
   return (
     <>
       <div className="w-full h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-800 relative">
-        <button onClick={darkMode} className=" absolute top-0 right-0 m-8 p-3 dark:bg-white rounded-full">
-          {togle ? <MdBrightness7 /> : <MdNightlight />}
-        </button>
+        <Swithcer />
         <div className="flex w-3/4 justify-around items-center">
           <Card dis={!scoreA > 0} up={scoreUpA} down={scoreDownA} id={1} player={"Player 1"}>{scoreA}</Card>
-          <h1 className="text-white font-bold text-5xl">VS</h1>
+          <h1 className="dark:text-white text-black font-bold text-5xl">VS</h1>
           <Card dis={!scoreB > 0} up={scoreUpB} down={scoreDownB} id={2} player={"Player 2"}>{scoreB}</Card>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
 export default function Card(prop) {
     return (
         <>
-            <div className="bg-blue-400 dark:bg-white p-4 rounded-xl">
+            <div className="bg-white shadow-lg dark:bg-white p-4 rounded-xl border-4">
                 <h1 className="text-center font-bold text-xl mb-3 uppercase">{prop.player}</h1>
                 <div className="flex flex-col rounded-xl">
                     <button id={'up' + prop.id} onClick={prop.up} className="w-44 text-white font-bold bg-slate-800 p-4 justify-center flex active:bg-slate-900 rounded-t-xl"><IoMdArrowDropup /></button>
